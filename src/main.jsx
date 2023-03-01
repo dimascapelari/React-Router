@@ -4,7 +4,11 @@ import App from "./App";
 import "./index.css";
 
 // 1 - configurando o Router
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import Home from "./routes/Home";
 import Contact from "./routes/Contact";
 import ErrorPage from "./routes/ErrorPage";
@@ -40,6 +44,11 @@ const router = createBrowserRouter([
       {
         path: "/contact/:id",
         element: <ContactDetails />,
+      },
+      // 7 - navigate para páginas não existentes
+      {
+        path: "oldcontact",
+        element: <Navigate to="/contact" />,
       },
     ],
   },
