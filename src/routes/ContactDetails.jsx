@@ -7,7 +7,7 @@ const ContactDetails = () => {
   const navigate = useNavigate();
 
   const handleContact = () => {
-    alert("Contato enviado!");
+    alert(`Mensgem enviada para o contato ${id}!`);
     return navigate("/");
   };
 
