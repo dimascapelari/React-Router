@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home";
 import Contact from "./routes/Contact";
 import ErrorPage from "./routes/ErrorPage";
+import ContactDetails from "./routes/ContactDetails";
 
 // const router = createBrowserRouter([
 //   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    // 3 - página de Erro
     errorElement: <ErrorPage />,
     children: [
       {
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      // 5 - nested routes - identificador único - dynamic routes
+      {
+        path: "/contact/:id",
+        element: <ContactDetails />,
       },
     ],
   },
