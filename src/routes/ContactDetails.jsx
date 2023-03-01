@@ -14,7 +14,9 @@ const ContactDetails = () => {
   return (
     <div>
       <h1>Exibindo mais informações do contato: {id}</h1>
-      <button onClick={handleContact}>Enviar mensagem</button>
+      <button onClick={handleContact} style={{ border: "1px solid #000" }}>
+        Enviar mensagem
+      </button>
     </div>
   );
 };
